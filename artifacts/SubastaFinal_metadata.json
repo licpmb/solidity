@@ -167,7 +167,7 @@
 								"type": "uint256"
 							}
 						],
-						"internalType": "struct Subasta.Oferta[]",
+						"internalType": "struct SubastaFinal.Oferta[]",
 						"name": "",
 						"type": "tuple[]"
 					}
@@ -266,7 +266,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"SubastaFinal.sol": "Subasta"
+			"SubastaFinal.sol": "SubastaFinal"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -281,11 +281,11 @@
 	},
 	"sources": {
 		"SubastaFinal.sol": {
-			"keccak256": "0xb2474db2a6c58c6dccb0dc10a4e006ddced7830f2b7987b9402f9bfb80e4c9b1",
+			"keccak256": "0xcbde46a289be1eeef87de593ee47ec703fdb6b059391d45533bc9c20d92cd6e0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ef43cbb92e4fbcb4caa7cdb85d979cf90cda7d9a12d2156dbd5aeec15fdcc6bb",
-				"dweb:/ipfs/Qme1U3HW6wQq6UeKbMpFEGEn9jpuQHWqFb6yqZKA26ZrX1"
+				"bzz-raw://117434ac92ee92fcc7e142fe26c45eec1756bc823b6bb3268c8707c17185fe6b",
+				"dweb:/ipfs/QmesEeo258khMxhaKXnYWJh4dBifhJrFNiPtCUQiPmLX4g"
 			]
 		}
 	},

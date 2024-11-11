@@ -120,7 +120,7 @@ contract test{
     }
 
     //Enumeraciones y manejo de estados
-    enum Estado{ // Maxio puede tener 256 miembros y eso es porque está contenido en un unit8
+    enum Estado{ // Maximo puede tener 256 miembros y eso es porque está contenido en un unit8
         prendido,
         apagado
     }
