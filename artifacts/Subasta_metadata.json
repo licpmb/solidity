@@ -28,7 +28,32 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
+						"name": "montoDevuelto",
+						"type": "uint256"
+					}
+				],
+				"name": "DepositoDevuelto",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "ofertante",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
 						"name": "montoOferta",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nuevaMejorOferta",
 						"type": "uint256"
 					}
 				],
@@ -56,80 +81,9 @@
 			},
 			{
 				"inputs": [],
-				"name": "comision",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "devolucionesPendientes",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "duracionSubasta",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "finalizarSubasta",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "mejorOferta",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "mejorOfertante",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -183,73 +137,10 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "ofertas",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "ofertante",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "montoOferta",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "retirar",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "subastaFinalizada",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tiempoExtensionSubasta",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -266,7 +157,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"SubastaFinal.sol": "Subasta"
+			"SubastaFinalv1.sol": "Subasta"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -280,12 +171,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"SubastaFinal.sol": {
-			"keccak256": "0xb2474db2a6c58c6dccb0dc10a4e006ddced7830f2b7987b9402f9bfb80e4c9b1",
+		"SubastaFinalv1.sol": {
+			"keccak256": "0x2134c6861abcd74bf1922ffe4eee204e6261db7ad422efcfa544ab4b3e027c12",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ef43cbb92e4fbcb4caa7cdb85d979cf90cda7d9a12d2156dbd5aeec15fdcc6bb",
-				"dweb:/ipfs/Qme1U3HW6wQq6UeKbMpFEGEn9jpuQHWqFb6yqZKA26ZrX1"
+				"bzz-raw://b6dd35ea2f74ad1921b37d3ffb872c4a94c22771f08130c3f62ad4b0da72aa4e",
+				"dweb:/ipfs/QmRHJ8qdgcMmgmLzfixhhHTwxMCrKPTzGQ46U4tiy6oHjT"
 			]
 		}
 	},
