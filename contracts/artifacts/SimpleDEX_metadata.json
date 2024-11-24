@@ -49,6 +49,56 @@
 					{
 						"indexed": true,
 						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountA",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					}
+				],
+				"name": "LiquidityAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountA",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					}
+				],
+				"name": "LiquidityRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
 						"name": "previousOwner",
 						"type": "address"
 					},
@@ -60,6 +110,56 @@
 					}
 				],
 				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "swapper",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountAIn",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountBOut",
+						"type": "uint256"
+					}
+				],
+				"name": "SwapAforB",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "swapper",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountBIn",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountAOut",
+						"type": "uint256"
+					}
+				],
+				"name": "SwapBforA",
 				"type": "event"
 			},
 			{
@@ -303,11 +403,11 @@
 			]
 		},
 		"contracts/SimpleDEX.sol": {
-			"keccak256": "0xcb897c2763a14c6d6a40a7479d17e15a9b021f20c64976439c56adf29b984b83",
+			"keccak256": "0x932f82c2856175dfe338f4f994674edd5f498e27c81032aa26a1e47f3b45fee6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1fa75602336149fb821abc3657d97b456b5d8917a0af2e351e8cbf58974d4e37",
-				"dweb:/ipfs/QmQyk42QcddaYKj5XdBx42sJWA1EGWrMwLWosf8Z8PikP6"
+				"bzz-raw://64caeaefabefcb71b1876d6bff59c898040a5e0db21c32cc0efe2839de8011d9",
+				"dweb:/ipfs/QmdJbYxjgojb4Xok5TZ7LeXv7E4vYmJzzLc9xACZPZnwfh"
 			]
 		}
 	},

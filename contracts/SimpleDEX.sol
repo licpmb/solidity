@@ -16,13 +16,18 @@ contract SimpleDEX is Ownable {
         tokenA = _tokenA;
         tokenB = _tokenB;
     }
+    event LiquidityAdded(address indexed provider, uint256 amountA, uint256 amountB);    //when owner adds liquidity
+    event LiquidityRemoved(address indexed provider, uint256 amountA, uint256 amountB);  //when owner takes liquidity
+    event SwapAforB(address indexed swapper, uint256 amountAIn, uint256 amountBOut);     // swap ETA -> ETB 
+    event SwapBforA(address indexed swapper, uint256 amountBIn, uint256 amountAOut);     // swap ETB -> ETA
 
     function addLiquidity(uint256 amountA, uint256 amountB) public {
         require(IERC20(tokenA).transferFrom(msg.sender, address(this), amountA), "Transfer of Token A failed");
         require(IERC20(tokenB).transferFrom(msg.sender, address(this), amountB), "Transfer of Token B failed");
-
+        
         reserveA += amountA;
         reserveB += amountB;
+        emit LiquidityAdded(msg.sender, amountA, amountB);
     }
 
     function swapAforB(uint256 amountAIn) public {
@@ -32,6 +37,7 @@ contract SimpleDEX is Ownable {
 
         reserveA += amountAIn;
         reserveB -= amountBOut;
+        emit SwapAforB(msg.sender, amountAIn, amountBOut);
     }
 
     function swapBforA(uint256 amountBIn) public {
@@ -41,6 +47,7 @@ contract SimpleDEX is Ownable {
 
         reserveA -= amountAOut;
         reserveB += amountBIn;
+        emit SwapBforA(msg.sender, amountBIn, amountAOut);
     }
 
     function removeLiquidity(uint256 amountA, uint256 amountB) public {
@@ -51,13 +58,16 @@ contract SimpleDEX is Ownable {
 
         reserveA -= amountA;
         reserveB -= amountB;
+        emit LiquidityRemoved(msg.sender, amountA, amountB);
     }
 
-    function getPrice(address _token) public view returns (uint256) {
-        if (_token == tokenA) {
+    function getPrice(address _token) external view returns (uint256) {
+        if (_token == address(tokenA)) {
             return reserveB / reserveA;
-        } else {
+        } else if (_token == address(tokenB)) {
             return reserveA / reserveB;
+        } else {
+            revert("Invalid token address");
         }
     }
 }
