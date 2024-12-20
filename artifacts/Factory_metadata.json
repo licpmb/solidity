@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "children",
+				"outputs": [
+					{
+						"internalType": "contract ChildContract",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
+					}
+				],
+				"name": "createChild",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"fabric.sol": "Factory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"fabric.sol": {
+			"keccak256": "0x66462bd98114c53505de41a8910860f95a9ec41d63ff4b7b26858950b26e55d8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://03d5628bb89f4b6adf5800a27146fddc819bb63c75c5b7dc408ef986e5ff63c5",
+				"dweb:/ipfs/QmVoo4csv6thxQQ6icgvkR1rq6Cokq7ExP4oa8zZoTnf1q"
+			]
+		}
+	},
+	"version": 1
+}
